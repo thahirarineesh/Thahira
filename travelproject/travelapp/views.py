@@ -1,11 +1,10 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Place,People
+
 
 # Create your views here.
-#return HttpResponse("hello world")
+
 def demo(request):
-    return render(request,"index.html")
-def about(request):
-    return render(request,"about.html")
-def contact(request):
-    return HttpResponse("hello am contact")
+    obj=Place.objects.all()
+    obj1=People.objects.all()
+    return render(request,"index.html",{'result':obj,'results':obj1})
