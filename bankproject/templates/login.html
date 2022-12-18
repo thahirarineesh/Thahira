@@ -1,0 +1,25 @@
+
+{% load static %}
+<form method="post" action="{% url 'bank:new_page' %}">
+    {% csrf_token %}
+    <br>
+    <title>Login </title>
+    <h1 style="color: blue;">Login Here</h1>
+          <br>              <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <br>
+
+
+  <button type="submit" href="{% url 'bank:new_page' %}">Submit</button>
+
+
+</form>
+<br>
+<br>
+
+<p style="color: blue;">Don't have an account? <a href="http://127.0.0.1:8000/Register/">Register here</a> </p>

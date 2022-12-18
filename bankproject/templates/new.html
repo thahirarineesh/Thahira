@@ -1,0 +1,15 @@
+<form method="post" action="{% url 'bank:About' %}" xmlns="http://www.w3.org/1999/html">
+    {% csrf_token %}
+    <title>Title</title>
+</head>
+<body>
+<br>
+<br>
+<br>
+<center><h1>Your application Accepted</h1></center>
+<center><p style="color: blue;" >please click on the home button to return home page </p></center><br>
+<center><button type="submit" href="{% url 'bank:About' %}">Home</button></center>
+
+</body>
+</form>
+</html>

@@ -1,0 +1,30 @@
+
+<form method="post" action="{% url 'bank:login' %}" xmlns="http://www.w3.org/1999/html">
+    {% csrf_token %}
+    <br>
+    <title>Register page </title>
+    <h1 style="color: blue;">Register Here</h1>
+          <br>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <br>
+    <label for="password"> Confirm Password:</label>
+    <input type="password" name="password" id="confirm password" required>
+    <br>
+    <br>
+    <form action="{% url 'bank:login' %}" method="post">
+         {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Log In">
+</form>
+
+
+
+</form>
+<br>
+<br>
+
